@@ -1,18 +1,16 @@
 html, body {
-  font-size: 16px;
   overflow: hidden;
-  /* NOTE: Don't use `-apple-system` at the head of a shorthand font declaration.
-     See https://booking.design/implementing-system-fonts-on-booking-com-a-lesson-learned-bdc984df627f for more info. */
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html, body, #canvas, #loader {
-  height: 100%;
-  left: 0;
   margin: 0;
   padding: 0;
-  top: 0;
   width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
 }
 
 a:link, a:visited {
@@ -28,20 +26,21 @@ a:link, a:visited {
 }
 
 #progress {
-  bottom: 0;
-  height: 80px;
   position: absolute;
-  width: 0;
+  bottom: 0px;
+  width: 0%;
+  background: #198EFB;
+  height: 80px;
 }
 
 .loading {
-  align-items: center;
-  color: #fff;
   display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
   font-size: 50px;
   font-weight: light;
   height: 100%;
-  justify-content: center;
 }
 
 /* loading dots */
@@ -55,25 +54,20 @@ a:link, a:visited {
     color: rgba(0,0,0,0);
     text-shadow:
       .25em 0 0 rgba(0,0,0,0),
-      .5em 0 0 rgba(0,0,0,0);
-  }
+      .5em 0 0 rgba(0,0,0,0);}
   40% {
-    color: #fff;
+    color: white;
     text-shadow:
       .25em 0 0 rgba(0,0,0,0),
-      .5em 0 0 rgba(0,0,0,0);
-  }
+      .5em 0 0 rgba(0,0,0,0);}
   60% {
     text-shadow:
-      .25em 0 0 #fff,
-      .5em 0 0 rgba(0,0,0,0);
-  }
+      .25em 0 0 white,
+      .5em 0 0 rgba(0,0,0,0);}
   80%, 100% {
     text-shadow:
-      .25em 0 0 #fff,
-      .5em 0 0 #fff;
-  }
-}
+      .25em 0 0 white,
+      .5em 0 0 white;}}
 
 #canvas {
   display: block;
@@ -99,44 +93,44 @@ a:link, a:visited {
   display: block;
 }
 
-#vr button {
-  border: none;
-}
-
 #entervr {
-  background: #fff url(vr.png) center no-repeat;
-  background-size: 80%;
-  cursor: pointer;
   display: none;
-  height: 100px;
   width: 100px;
+  height: 100px;
+  background: white;
+  border: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-image: url('vr.png');
 }
 
 [data-unity-loaded='true'] #entervr[data-enabled='true'] {
   display: block;
 }
 
-#progress,
-#entervr:hover,
-#instruction button {
+#entervr:hover {
   background-color: #198EFB;
+  cursor: pointer;
 }
 
 #instruction {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #instruction button {
+  background: #198EFB;
   color: #fff;
-  cursor: pointer;
   font-size: 25px;
+  border: none;
   padding: 15px 20px;
+  cursor: pointer;
 }
 
 #icons {
@@ -144,9 +138,9 @@ a:link, a:visited {
 }
 
 .panel {
-  background: #fff;
   display: none;
   max-width: 50%;
+  background: white;
   padding: 10px 30px;
 }
 
@@ -157,3 +151,4 @@ a:link, a:visited {
 .center {
   text-align: center;
 }
+
